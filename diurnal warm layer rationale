@@ -1,0 +1,28 @@
+Fortran 77 program that encompass and simulates the following article ##
+
+Diurnal warm layers (DWLs) develop under relatively weak  winds and strong solar radiation and have important consequences for  ocean surface transport and air–sea interactions. In this paper, we  investigate DWLs during 3 consecutive days in the subtropical South  Atlantic using observations from an underwater glider equipped with a  turbulence microstructure package, a series of drifters at two different  depths, and a 1D turbulence model. The observations and modeling show  that the DWLs create a near-surface stratification that partially  decouples the surface current from the mixed layer below. However, we  find that turbulent entrainment of momentum from below the DWL is  important in the evolution of the surface current. We further derive  buoyancy, potential, and kinetic energy budgets and identify the  dominant terms. The upper-ocean potential energy budget is dominated by  the incoming solar radiation, with only a small contribution from  turbulent mixing. Turbulent shear production, however, is found to be an  important influence on the upper-ocean mean kinetic energy, receiving a  similar fraction of the wind work as the acceleration of the diurnal  jet. The DWL evolution and energy budgets are corroborated with  simulations from a freely evolving 1D turbulence model, which  additionally shows that the exchange of mean kinetic energy with the  surface wave field due to rotation is of minor importance to the  development of the DWLs we observe.
+
+
+
+© 2025 American Meteorological Society. This published article is  licensed under the terms of the default AMS reuse license. For  information regarding reuse of this content and general copyright  information, consult the AMS Copyright Policy (www.ametsoc.org/PUBSReuseLicenses).
+
+Miracca-Lage’s current affiliation: Department of Marine Sciences, University of Gothenburg, Gothenburg, Sweden
+
+**
+
+  
+What this demo shows (and how it maps to the article’s findings)
+
+Near-surface stratification & partial decoupling: daytime solar deposition (QSW0, exponential penetration) warms the top layers, yielding a shallow MLD that shoals around noon; surface currents strengthen while shear increases at the DWL base, partially decoupling the surface jet from the cooler mixed layer below.
+
+Momentum entrainment from below DWL: the diagnostic ENTR_MOM via stress at the MLD base (TAUBOTX/Y) highlights entrainment of momentum upward during/after peak shear.
+
+Energy budgets:
+
+PE = ∫ρ₀ g α (T–Tref) z dz. We compute d(PE)/dt and separate a solar PE source (depth-weighted shortwave deposition) with the residual labeled mixing PE (small compared to solar in daytime).
+
+MKE storage (dKE/dt) vs wind work (τ·U|z=0 / ρ₀) and shear production (∫Kₘ|∂U/∂z|²dz). You should see shear production comparable in magnitude to the work accelerating the diurnal jet during daytime, matching the qualitative result.
+
+Wave–rotation exchange is not explicitly modeled (kept negligible), consistent with being of minor importance here.
+
+
